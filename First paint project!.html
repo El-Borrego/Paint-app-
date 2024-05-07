@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+
+            <link rel="stylesheet" href="First paint project.css">
+
+        </head>
+        <body>
+            <header>
+                <h1>
+                <span onclick="secretColor(this)" style="color:rebeccapurple">P</span>
+                <span onclick="secretColor(this)" style="color:#ff2020">A</span>
+                <span onclick="secretColor(this)" style="color:lime">I</span>
+                <span onclick="secretColor(this)" style="color:white">N</span>
+                <span onclick="secretColor(this)" style="color:orange">T</span>
+                <span onclick="secretColor(this)" style="color:yellow">!</span>
+                </h1>
+            </header>
+            <main>
+            <!--May need to put everything in a div together for some reason...
+            
+            but I don't see why... should be... simple/easy enough... the way I'm going to set it up... -->
+                <canvas id="canvas"></canvas>
+                    <div id="tools">
+                        <div id="button-container1">
+                            <button id="clear" class="normal-buttons" onclick="clearScreen()">Clear</button>
+                            <button id="undo" class="normal-buttons" onclick="undo()">Undo</button>
+                        </div>
+                        <div id="color-buttons-container">
+                            <button id="red" style="background-color:#ff0000;" onclick="changeColor(this)"></button>
+                            <button id="green" onclick="changeColor(this)" style="background-color:#00ff00;"></button>
+                            <button id="blue" onclick="changeColor(this)" style="background-color:#0000ff"></button>
+                            <button id="black" onclick="changeColor(this)" style="background-color:#000000"></button>
+                        </div>
+                        <div id="input-container">
+                            <input type="color" id="color-picker" onInput = "startingColor = this.value">
+                            <input type="range" id="pixels" min="2" max="28" value="5" onmouseup="pixelSize()">
+                        </div>
+                    </div>
+            </main>
+
+            <script src="First paint project.js"></script>
+
+        </body>
+    </html>
